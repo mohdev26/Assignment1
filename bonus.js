@@ -1,15 +1,7 @@
-/**
- * @param {number[]} arr
- * @param {number} k
- * @return {number}
- */
-var findKthPositive = function(arr, k) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] <= k) {
-            k++;
-        } else {
-            break;
-        }
-    }
-    return k;
-};
+let count = 0;
+let candidate;
+
+for (let num of nums) {
+    if (count === 0) candidate = num;
+    count += (num === candidate) ? 1 : -1;
+}
