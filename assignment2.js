@@ -124,21 +124,4 @@ const { log } = require('console');
 
 //17//لسه ماوصلناش ليها
 
-function findKthPositive(arr, k) {
-  let missing = [];
-  let num = 1;
-  let i = 0;
 
-  while (missing.length < k) {
-    if (arr[i] !== num) {
-      missing.push(num);
-    } else {
-      i++;
-    }
-    num++;
-  }
-
-  return missing[k - 1];
-}
-
-console.log(findKthPositive([2,3,4,7,11],5));
